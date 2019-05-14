@@ -1889,10 +1889,12 @@ static NSString * const kReuseIdentifier = @"_ASCollectionReuseIdentifier";
 
 - (void)_beginBatchFetchingPrepend
 {
-    if ([_asyncDelegate respondsToSelector:@selector(collectionNode:willBeginBatchFetchPrependWithContext:)]) {
-        GET_COLLECTIONNODE_OR_RETURN(collectionNode, (void)0);
-        [_asyncDelegate collectionNode:collectionNode willBeginBatchFetchPrependWithContext:_batchContext];
-    }
+  if ([_asyncDelegate respondsToSelector:@selector(collectionNode:willBeginBatchFetchPrependWithContext:)]) {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+      GET_COLLECTIONNODE_OR_RETURN(collectionNode, (void)0);
+      [_asyncDelegate collectionNode:collectionNode willBeginBatchFetchPrependWithContext:_batchContext];
+    });
+  }
 }
 
 - (void)_beginBatchFetching
