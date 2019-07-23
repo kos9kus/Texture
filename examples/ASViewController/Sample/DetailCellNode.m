@@ -22,8 +22,13 @@
     self.automaticallyManagesSubnodes = YES;
     
     _imageNode = [[ASNetworkImageNode alloc] init];
-    _imageNode.backgroundColor = ASDisplayNodeDefaultPlaceholderColor();
-    
+//    _imageNode.backgroundColor = ASDisplayNodeDefaultPlaceholderColor();
+    self.imageNode.image = [UIImage as_resizableRoundedImageWithCornerRadius:20 cornerColor:UIColor.greenColor fillColor:UIColor.blueColor];
+    //    CGFloat cornerRadius = 20.0;
+    //    _imageNode.backgroundColor = ASDisplayNodeDefaultPlaceholderColor();
+    //    _imageNode.cornerRoundingType = ASCornerRoundingTypePrecomposited;
+    //    _imageNode.cornerRadius = cornerRadius;
+
     return self;
 }
 
@@ -31,6 +36,7 @@
 
 - (ASLayoutSpec *)layoutSpecThatFits:(ASSizeRange)constrainedSize
 {
+    //    self.imageNode.image = [UIImage as_resizableRoundedImageWithCornerRadius:20 cornerColor:UIColor.greenColor fillColor:UIColor.blueColor];
     return [ASRatioLayoutSpec ratioLayoutSpecWithRatio:1.0 child:self.imageNode];
 }
 
@@ -42,7 +48,7 @@
     // view model setter method.
     // In this case as we need to know the size of the node the url is set in layoutDidFinish so
     // we have the calculatedSize available
-    self.imageNode.URL = [self imageURL];
+//    self.imageNode.URL = [self imageURL];
 }
 
 #pragma mark  - Image

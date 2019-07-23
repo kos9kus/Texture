@@ -42,7 +42,8 @@ static const NSInteger kImageHeight = 200;
         _collectionNode = [[ASCollectionNode alloc] initWithCollectionViewLayout:layout];
         _collectionNode.delegate = self;
         _collectionNode.dataSource = self;
-        _collectionNode.backgroundColor = [UIColor whiteColor];
+//        _collectionNode.backgroundColor = [UIColor whiteColor];
+        _collectionNode.backgroundColor = [UIColor redColor];
     }
     
     return self;
