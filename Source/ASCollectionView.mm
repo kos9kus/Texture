@@ -1819,7 +1819,7 @@ static NSString * const kReuseIdentifier = @"_ASCollectionReuseIdentifier";
   BOOL canFetch = _asyncDelegateFlags.collectionNodeWillBeginBatchFetchPrepend;
   if (canFetch && _asyncDelegateFlags.shouldBatchFetchPrependForCollectionNode) {
     GET_COLLECTIONNODE_OR_RETURN(collectionNode, NO);
-    return [_asyncDelegate shouldBatchFetchForCollectionNode:collectionNode];
+    return [_asyncDelegate shouldBatchFetchPrependForCollectionNode:collectionNode];
   } else {
     return canFetch;
   }
