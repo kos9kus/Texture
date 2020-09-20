@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param velocity The velocity of the scroll view (in points) at the moment the touch was released.
  @return Whether or not the current state should proceed with batch fetching.
  */
-AS_EXTERN BOOL ASDisplayShouldFetchBatchForScrollView(UIScrollView<ASBatchFetchingScrollView> *scrollView,
+ASDK_EXTERN BOOL ASDisplayShouldFetchBatchForScrollView(UIScrollView<ASBatchFetchingScrollView> *scrollView,
                                             ASScrollDirection scrollDirection,
                                             ASScrollDirection scrollableDirections,
                                             CGPoint contentOffset,
@@ -66,7 +66,7 @@ AS_EXTERN BOOL ASDisplayShouldPrependFetchBatchForScrollView(UIScrollView<ASBatc
  @discussion This method is broken into a category for unit testing purposes and should be used with the ASTableView and
  * ASCollectionView batch fetching API.
  */
-AS_EXTERN BOOL ASDisplayShouldFetchBatchForContext(ASBatchContext *context,
+ASDK_EXTERN BOOL ASDisplayShouldFetchBatchForContext(ASBatchContext *context,
                                                 ASScrollDirection scrollDirection,
                                                 ASScrollDirection scrollableDirections,
                                                 CGRect bounds,
