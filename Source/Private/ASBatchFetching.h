@@ -43,7 +43,7 @@ ASDK_EXTERN BOOL ASDisplayShouldFetchBatchForScrollView(UIScrollView<ASBatchFetc
                                             CGPoint contentOffset,
                                             CGPoint velocity);
 
-AS_EXTERN BOOL ASDisplayShouldPrependFetchBatchForScrollView(UIScrollView<ASBatchFetchingScrollView> *scrollView,
+ASDK_EXTERN BOOL ASDisplayShouldPrependFetchBatchForScrollView(UIScrollView<ASBatchFetchingScrollView> *scrollView,
                                                    ASScrollDirection scrollDirection,
                                                    ASScrollDirection scrollableDirections,
                                                    CGPoint contentOffset,
@@ -78,6 +78,6 @@ ASDK_EXTERN BOOL ASDisplayShouldFetchBatchForContext(ASBatchContext *context,
                                                 _Nullable id<ASBatchFetchingDelegate> delegate,
                                                 BOOL prepend);
 
-AS_EXTERN BOOL ASDisplayIsScrollingTowardHead(ASScrollDirection scrollDirection);
+ASDK_EXTERN BOOL ASDisplayIsScrollingTowardHead(ASScrollDirection scrollDirection);
 
 NS_ASSUME_NONNULL_END

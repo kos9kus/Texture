@@ -1893,8 +1893,8 @@ static NSString * const kReuseIdentifier = @"_ASCollectionReuseIdentifier";
   if (_asyncDelegateFlags.collectionNodeWillBeginBatchFetchPrepend) {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
       GET_COLLECTIONNODE_OR_RETURN(collectionNode, (void)0);
-      as_log_debug(ASCollectionLog(), "Beginning batch fetch prepend for %@ with context %@", collectionNode, _batchContext);
-      [_asyncDelegate collectionNode:collectionNode willBeginBatchFetchPrependWithContext:_batchContext];
+      os_log_debug(ASCollectionLog(), "Beginning batch fetch prepend for %@ with context %@", collectionNode, self->_batchContext);
+      [self->_asyncDelegate collectionNode:collectionNode willBeginBatchFetchPrependWithContext:self->_batchContext];
     });
   }
 }

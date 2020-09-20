@@ -1538,7 +1538,7 @@ static NSString * const kCellReuseIdentifier = @"_ASTableViewCell";
   if (_asyncDelegateFlags.tableNodeWillBeginBatchFetchPrepend) {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
       GET_TABLENODE_OR_RETURN(tableNode, (void)0);
-      [_asyncDelegate tableNode:tableNode willBeginBatchFetchPrependWithContext:_batchContext];
+      [self->_asyncDelegate tableNode:tableNode willBeginBatchFetchPrependWithContext:self->_batchContext];
     });
   }
 }
