@@ -2,12 +2,12 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - JGMethodSwizzler (2.0.1)
   - OCMock (3.4.1)
-  - PINCache (3.0.1):
-    - PINCache/Arc-exception-safe (= 3.0.1)
-    - PINCache/Core (= 3.0.1)
-  - PINCache/Arc-exception-safe (3.0.1):
+  - PINCache (3.0.2):
+    - PINCache/Arc-exception-safe (= 3.0.2)
+    - PINCache/Core (= 3.0.2)
+  - PINCache/Arc-exception-safe (3.0.2):
     - PINCache/Core
-  - PINCache/Core (3.0.1):
+  - PINCache/Core (3.0.2):
     - PINOperation (~> 1.2.0)
   - PINOperation (1.2)
   - PINRemoteImage (3.0.1):
@@ -46,7 +46,7 @@ SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   JGMethodSwizzler: 7328146117fffa8a4038c42eb7cd3d4c75006f97
   OCMock: 2cd0716969bab32a2283ff3a46fd26a8c8b4c5e3
-  PINCache: ee3c4abadd09970a61cdda0cfc345e69a3d75b26
+  PINCache: bea7c404c360f6fe0f6ee783c5cd14e778fa2aab
   PINOperation: 3a967a927e7867e61976c6cc23e5770416449fbc
   PINRemoteImage: 3b7cedb118c2d357f87e9eabc7c81ba0202cb236
 
